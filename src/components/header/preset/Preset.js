@@ -4,23 +4,25 @@ import Modal from './Modal'
 
 const Preset = (props) => {
   let [modal, setModal] = useState(false);
-  const showModal = () => {
-    setModal(true);
+  let [nameMode, setNameMode] = useState('Tabata');
+  const showHideModal = () => {
+    !modal ? setModal(true) : setModal(false);
+  } 
+  const choiceMode = (name) => {
+    setNameMode(name)
   }
-  const hideModal = () => {
-    setModal(false);
-  }
-  console.log(modal);
+
   return (
   <>
-    <li className="item2" onClick={showModal}>
-      <span>Tabata</span>      
-      <FaAngleDown />       
-    </li>
-    <Modal handleClose={hideModal} show={modal}>
-      <h1>Hello world</h1>
-    </Modal>
-   </> 
+    <li className="item2" onClick={ showHideModal }>
+      <span>{nameMode}</span>      
+      <FaAngleDown />   
+    </li>    
+    <Modal
+      show={ modal }
+      onChange={ choiceMode }
+    />
+  </> 
   )
 }
 

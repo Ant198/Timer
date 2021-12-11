@@ -1,18 +1,23 @@
 import React from 'react'
 
-const Modal = ({ handleClose, show, children}) => {
+const Modal = ({ show, onChange }) => {
   const showHideClassName = show ? 'modal-show' : 'modal-hide';
-  const onClick = () => {
-    handleClose();
+  const onClick = (event) => {
+    console.log(event.target);
   }
-  
+    
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {children}
-        <button type="button" onClick={onClick}>
-          Close
-        </button>
+        <ul className="modal-list">
+          <li className="item2" >
+            <a href="#" onClick={onClick}>Tabata</a>
+            <div>
+            <button className="modal-btn">Edit</button>
+            <button className="modal-btn">Delete</button>
+            </div>            
+          </li>
+        </ul>
       </section>
     </div>
   )
