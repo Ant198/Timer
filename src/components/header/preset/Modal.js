@@ -15,7 +15,7 @@ const Modal = ({ show, onChange }) => {
             <div>
             <button className="modal-btn">Edit</button>
             <button className="modal-btn">Delete</button>
-            </div>            
+            </div>
           </li>
         </ul>
       </section>

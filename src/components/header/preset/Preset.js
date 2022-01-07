@@ -15,9 +15,9 @@ const Preset = (props) => {
   return (
   <>
     <li className="item2" onClick={ showHideModal }>
-      <span>{nameMode}</span>      
-      <FaAngleDown />   
-    </li>    
+      <span>{nameMode}</span>
+      <FaAngleDown /> 
+    </li>
     <Modal
       show={ modal }
       onChange={ choiceMode }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
 import Preset from './preset/Preset'
+import AddParameters from './addParametrs/AddParameters'
 
-const Header = (prop) => {
+const Header = (props) => {
     
   return (
     <ul className="header-menu">
@@ -10,9 +10,7 @@ const Header = (prop) => {
         <span>Preset:</span>
       </li>
       <Preset />
-      <li className="item3">
-        <FaPlus />
-      </li>
+      <AddParameters />
       <li className="item4">
         Sound: <span>On</span>
       </li>
